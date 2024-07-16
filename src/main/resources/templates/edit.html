@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>EditNote</title>
+</head>
+<body>
+<form th:action="@{/edit}" method="post" th:object="${noteEntity}">
+    <div><label> Current note : <input th:field="*{note}" type="text" name="note"/> </label></div>
+    <div><input type="submit" value="Change note"></div>
+    <input th:field="*{id}" type="hidden" name="id"/>
+</form>
+<a href="/notes">Back</a>
+</body>
+</html>

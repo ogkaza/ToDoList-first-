@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+</head>
+<body>
+<form th:action="@{/main}" method="post" th:object="${noteEntity}">
+    <div><label> New note : <input type="text" name="note"/> </label></div>
+    <div><input type="submit" value="Save"/></div>
+</form>
+<a href="/notes">Notes</a>
+</body>
+</html>
